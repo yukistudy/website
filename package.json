@@ -1,0 +1,26 @@
+{
+  "name": "package.json",
+  "version": "10.5.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukistudy/website.git"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "html",
+    "css"
+  ],
+  "author": "yuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yukistudy/website/issues"
+  },
+  "homepage": "https://github.com/yukistudy/website#readme",
+  "description": ""
+}
