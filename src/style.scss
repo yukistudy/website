@@ -1,6 +1,49 @@
+@import 'mixin';
+
+
 $cBlack: black;
 $cWhite: white;
 
+body {
+    margin: 0;
+    background-color: teal;
+}
+#container {
+    position: relative;
+    height: 100vh;
+}
+
+.animate-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    &.inview {
+        & .char {
+            display: inline-block;
+
+            @include animation($name: kf-animate-char,
+            $duration: 0.5s,
+            $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
+            $fill-mode: both
+            )
+        }
+    }
+}
+
+@keyframes kf-animate-char {
+    0% {
+        opacity: 0;
+        transform: translate(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 .menu-icon {
     background-color: transparent;
     border:none;

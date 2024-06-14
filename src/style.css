@@ -1,3 +1,41 @@
+body {
+  margin: 0;
+  background-color: teal;
+}
+
+#container {
+  position: relative;
+  height: 100vh;
+}
+
+.animate-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.animate-title.inview .char {
+  display: inline-block;
+  animation-name: kf-animate-char;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+@keyframes kf-animate-char {
+  0% {
+    opacity: 0;
+    transform: translate(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 .menu-icon {
   background-color: transparent;
   border: none;
@@ -28,4 +66,4 @@
 }
 .menu-open .menu-icon > span:nth-child(3) {
   transform: translateY(-11px) rotate(-135deg);
-}
+}/*# sourceMappingURL=style.css.map */
